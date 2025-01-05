@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border don't affect element width */
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 250px;
+    width: 100%;  /* Full width */
+    background-color: whitesmoke;
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: darkcyan;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Buttons Section */
+.major {
+    height: 500px;
+    width: 100%;  /* Full width */
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two buttons per row by default */
+    gap: 20px;
+    color: white;
+    width: 100%;
+    max-width: 600px;  /* Max width to prevent button overflow */
+}
+
+.bt {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: transparent;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt:hover {
+    transform: scale(1.1); /* Smooth grow on hover */
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+}
+
+.btn1 { background-color: blue; }
+.btn2 { background-color: black; }
+.btn3 { background-color: red; }
+.btn4 { background-color: yellow; 
+ color: black;
+}
+
+/* Footer Section */
+.footer_ {
+    background-color: black;
+    color: whitesmoke;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 5px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: orangered;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* For tablets or smaller screens */
+    .hero-section {
+        height: 200px;
+        font-size: 40px;
+    }
+    
+    .major {
+        height: auto;
+        padding: 15px;
+    }
+    
+    .btns {
+        grid-template-columns: repeat(2, 1fr);  /* Stack buttons vertically on smaller screens */
+    }
+    
+    .bt {
+        width: 80px;
+        height: 80px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile screens */
+    .hero-section {
+        height: 150px;
+        font-size: 30px;
+    }
+    
+    .btns {
+        grid-template-columns: 1fr;  /* Buttons in a single column */
+    }
+    
+    .bt {
+        width: 60px;
+        height: 60px;
+        font-size: 0.9rem;
+    }
+    
+    .footer_ {
+        font-size: 12px;
+    }
+}
+
+/* Font Size & Accessibility */
+h1, p {
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
